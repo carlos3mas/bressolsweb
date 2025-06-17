@@ -10,7 +10,7 @@ export default function Footer() {
         {/* ICONOS DE REDES */}
        <div className="flex justify-center gap-6 pt-4 text-gray-700">
   <a
-    href="https://facebook.com/ceibressols"
+    href="https://www.facebook.com/Bressolsonda/?locale=es_LA"
     target="_blank"
     rel="noopener noreferrer"
     className="hover:text-black"
@@ -26,7 +26,7 @@ export default function Footer() {
     </svg>
   </a>
   <a
-    href="https://instagram.com/ceibressols"
+    href="https://www.instagram.com/bressolsonda/"
     target="_blank"
     rel="noopener noreferrer"
     className="hover:text-black"
@@ -39,22 +39,6 @@ export default function Footer() {
       viewBox="0 0 24 24"
     >
       <path d="M7.75 2A5.75 5.75 0 0 0 2 7.75v8.5A5.75 5.75 0 0 0 7.75 22h8.5A5.75 5.75 0 0 0 22 16.25v-8.5A5.75 5.75 0 0 0 16.25 2h-8.5ZM4.5 7.75a3.25 3.25 0 0 1 3.25-3.25h8.5a3.25 3.25 0 0 1 3.25 3.25v8.5a3.25 3.25 0 0 1-3.25 3.25h-8.5a3.25 3.25 0 0 1-3.25-3.25v-8.5Zm12.5-.5a1 1 0 1 0 0 2 1 1 0 0 0 0-2ZM12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm0 1.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" />
-    </svg>
-  </a>
-  <a
-    href="https://t.me/ceibressols"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="hover:text-black"
-    aria-label="Telegram"
-  >
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      className="w-6 h-6"
-      fill="currentColor"
-      viewBox="0 0 24 24"
-    >
-      <path d="M9.04 16.69l-.39 5.61c.56 0 .8-.24 1.08-.52l2.59-2.49 5.37 3.91c.99.56 1.68.27 1.93-.92l3.5-16.51c.31-1.49-.55-2.08-1.51-1.7L.98 9.45c-1.45.56-1.43 1.35-.26 1.7l5.98 1.86 13.85-8.73c.65-.41 1.25-.19.76.26Z" />
     </svg>
   </a>
 </div>

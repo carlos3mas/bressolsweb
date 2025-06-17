@@ -1,78 +1,76 @@
 import Image from "next/image";
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import CarruselClases from './CarruselCLases' 
+import Link from "next/link";
 
-
-export default function QuienSomos() {
-  const [ref1, inView1] = useInView({ triggerOnce: false, threshold: 0.2 });
-  const [ref2, inView2] = useInView({ triggerOnce: false, threshold: 0.2 });
-
+export default function QuienesSomos() {
   return (
-    <section id="quien-somos" className="py-16 px-4 sm:px-6 lg:px-8 w-full">
-      <div className="max-w-5xl mx-auto text-center">
-        <h2 className="text-3xl sm:text-4xl font-bold text-bressolsAzul mb-12">
-          Qui som
-        </h2>
+    <section className="py-16 bg-fondo relative overflow-hidden">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col lg:flex-row items-center gap-12">
+          {/* Imágenes lado izquierdo */}
+          <div className="lg:w-1/2 w-full relative">
+            <div className="relative w-full h-[420px] sm:h-[600px] rounded-2xl overflow-visible p-2 sm:p-4">
+              {/* Updated circle with correct color and position */}
+              <div className="hidden sm:block absolute left-[60%] top-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[400px] h-[300px] sm:h-[400px] bg-bressolsAzul rounded-full z-0"></div>
+              <div className="relative grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4 h-full">
+                {/* First image */}
+                <div className="relative h-[120px] sm:h-[250px] w-full sm:w-[350px] rounded-xl overflow-hidden z-10 transition-all duration-300 hover:scale-105 hover:-rotate-2 hover:shadow-xl transform sm:-translate-y-4">
+                  <Image
+                    src="/foto-centro.jpg"
+                    alt="Exterior del centre Bressols"
+                    fill
+                    className="object-cover rounded-xl"
+                    priority
+                  />
+                </div>
 
-        {/* Foto del centro + texto */}
-        <motion.div
-          ref={ref1}
-          initial={{ opacity: 0, x: -100 }}
-          animate={inView1 ? { opacity: 1, x: 0 } : {}}
-          transition={{ duration: 1.2, ease: "easeOut" }}
-          className="flex flex-col md:flex-row items-center gap-6 sm:gap-8 mb-12"
-        >
-          <div className="w-full md:w-1/2 relative h-64 sm:h-80">
-            <Image
-              src="/foto-centro.jpg"
-              alt="Foto del centre Bressols"
-              layout="fill"
-              objectFit="cover"
-              className="rounded-lg shadow-lg"
-              priority
-            />
+                {/* Second image */}
+                <div className="relative h-[120px] sm:h-[250px] w-full sm:w-[250px] rounded-xl overflow-hidden z-10 transition-all duration-300 hover:scale-105 hover:-rotate-2 hover:shadow-xl transform sm:translate-x-[20%] sm:translate-y-12">
+                  <Image
+                    src="/actividad-8.jpg"
+                    alt="Interior del centre Bressols"
+                    fill
+                    className="object-cover rounded-xl"
+                  />
+                </div>
+
+                {/* Third image */}
+                <div className="relative h-[160px] sm:h-[300px] w-full sm:w-[400px] rounded-xl overflow-hidden col-span-1 sm:col-span-2 z-20 transition-all duration-300 hover:scale-105 hover:-rotate-2 hover:shadow-xl transform sm:translate-x-[15%] sm:translate-y-[-20%]">
+                  <Image
+                    src="/excursion-1.jpg"
+                    alt="Equip de professionals de Bressols"
+                    fill
+                    className="object-cover rounded-xl"
+                    style={{ objectPosition: "center center" }}
+                  />
+                </div>
+              </div>
+            </div>
           </div>
-          <p className="text-base sm:text-lg text-gray-700 text-justify md:w-1/2">
-            Som un centre d&apos;educació infantil amb més de 20 anys d&apos;experiència, oferint un espai càlid, segur i estimulant per als més petits. La nostra filosofia es basa en el respecte pel ritme de cada infant, fomentant la seva autonomia, curiositat i creativitat des del primer dia.
-          </p>
-        </motion.div>
 
-        {/* Foto del equip + texto */}
-        <motion.div
-          ref={ref2}
-          initial={{ opacity: 0, x: 100 }}
-          animate={inView2 ? { opacity: 1, x: 0 } : {}}
-          transition={{ duration: 1.2, ease: "easeOut" }}
-          className="flex flex-col md:flex-row-reverse items-center gap-6 sm:gap-8"
-        >
-          <div className="w-full md:w-1/2 relative h-64 sm:h-80">
-            <Image
-              src="/foto-equip.jpg"
-              alt="Equip educatiu Bressols"
-              layout="fill"
-              objectFit="cover"
-              className="rounded-lg shadow-lg"
-            />
+          {/* Contenido lado derecho */}
+          <div className="lg:w-1/2">
+            <span className="text-bressols font-medium mb-2 block">
+              C.E.I BRESSOLS
+            </span>
+            <h2 className="text-2xl sm:text-4xl font-bold text-navy-900 mb-6">
+              Som un centre d&apos;educació infantil amb més de 20 anys
+              d&apos;experiència
+            </h2>
+            <p className="text-gray-600 mb-8 text-base sm:text-lg">
+              Ens dediquem a l&apos;educació i dels infants de 0 a 3 anys,
+              Oferint un espai càlid, segur i estimulant per als més petits. La
+              nostra filosofia es basa en el respecte pel ritme de cada infant,
+              fomentant la seva autonomia, curiositat i creativitat des del
+              primer dia.
+            </p>
+            <Link
+              href="#contacte"
+              className="inline-block px-4 py-2 sm:px-8 sm:py-3 mt-4 text-base sm:text-lg font-semibold rounded-full bg-bressolsAzul text-white shadow-lg hover:bg-bressolsAzul/90 transition-colors duration-200"
+            >
+              CONTACTA AMB NOSALTRES
+            </Link>
           </div>
-          <p className="text-base sm:text-lg text-gray-700 text-justify md:w-1/2">
-            Comptem amb un equip de professionals altament qualificades, implicades i amb una gran vocació educativa. La seva dedicació diària fa possible una atenció individualitzada i un ambient de confiança on cada infant pot créixer feliç.
-          </p>
-        </motion.div>
-
-        {/* Foto de las clases + texto */}
-       <motion.div
-          ref={ref1}
-          initial={{ opacity: 0, x: -100 }}
-          animate={inView1 ? { opacity: 1, x: 0 } : {}}
-          transition={{ duration: 1.2, ease: "easeOut" }}
-          className="flex flex-col md:flex-row items-center gap-6 sm:gap-8 mb-12"
-        >
-        <CarruselClases />
-          <p className="text-base sm:text-lg text-gray-700 text-justify md:w-1/2">
-            Disposem d&apos;unes instal·lacions modernes i adaptades a les necessitats dels infants, amb aules àmplies, zones de joc i espais exteriors. Cada racó del centre està dissenyat per estimular la seva curiositat i fomentar el seu aprenentatge a través del joc.
-           </p>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

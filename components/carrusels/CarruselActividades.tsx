@@ -4,10 +4,16 @@ import Image from 'next/image'
 import { useState, useEffect } from 'react'
 
 const imagenes = [
-  '/foto-clase.jpg',
-  '/foto-clase-2.jpg',
-  '/foto-clase-3.jpg',
-  '/foto-clase-4.jpg',
+
+    '/actividad-1.jpg',
+    '/actividad-2.jpg',
+    '/actividad-3.jpg',
+    '/actividad-4.jpg',
+    '/actividad-5.jpg',
+    '/actividad-6.jpg',
+    '/actividad-7.jpg',
+    '/actividad-8.jpg',
+    '/actividad-9.jpg',
 ]
 
 export default function CarruselClases() {

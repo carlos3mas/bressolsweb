@@ -45,11 +45,23 @@ export default function Navbar() {
           >
             Qui som
           </a>
+           <a
+            href="#instalaciones"
+            className="px-4 py-2 rounded-md text-bressolsAzul font-medium transition hover:bg-bressolsAzul hover:text-bressols"
+          >
+            Instalacions
+          </a>
           <a
             href="#serveis"
             className="px-4 py-2 rounded-md text-bressolsAzul font-medium transition hover:bg-bressolsAzul hover:text-bressols"
           >
             Serveis
+          </a>
+          <a
+            href="#filosofia"
+            className="px-4 py-2 rounded-md text-bressolsAzul font-medium transition hover:bg-bressolsAzul hover:text-bressols"
+          >
+            Filosofia
           </a>
           <a
             href="#contacte"
@@ -78,11 +90,25 @@ export default function Navbar() {
             Qui som
           </a>
           <a
+            href="#instalaciones"
+            onClick={toggleMenu}
+            className="text-bressolsAzul font-medium"
+          >
+            Instalacions
+          </a>
+          <a
             href="#serveis"
             onClick={toggleMenu}
             className="text-bressolsAzul font-medium"
           >
             Serveis
+          </a>
+          <a
+            href="#filosofia"
+            onClick={toggleMenu}
+            className="text-bressolsAzul font-medium"
+          >
+            Filosofia
           </a>
           <a
             href="#contacte"
