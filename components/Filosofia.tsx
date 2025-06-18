@@ -1,37 +1,62 @@
 import Image from "next/image";
+import { FcLock, FcLike, FcIdea, FcCollaboration, FcApproval, FcMindMap } from "react-icons/fc";
 // Si no tienes react-icons instalado, usa emojis como iconos:
 // import { FaHandsHelping, FaShieldAlt, FaLightbulb, FaSmile, FaUsers } from "react-icons/fa";
 
 const filosofiaPunts = [
   {
-    icon: <span className="text-3xl">🛡️</span>,
+    icon: (
+      <span className="flex items-center justify-center w-14 h-14 rounded-full bg-blue-100 mb-4">
+        <FcLock size={32} />
+      </span>
+    ),
     title: "Seguretat",
     desc: "Un entorn segur on cada infant pot créixer i aprendre amb tranquil·litat.",
   },
   {
-    icon: <span className="text-3xl">🤝</span>,
+    icon: (
+      <span className="flex items-center justify-center w-14 h-14 rounded-full bg-blue-100 mb-4">
+        <FcApproval size={32} />
+      </span>
+    ),
     title: "Confiança",
     desc: "Relació propera i de confiança amb les famílies i els infants.",
   },
   {
-    icon: <span className="text-3xl">💡</span>,
+    icon: (
+      <span className="flex items-center justify-center w-14 h-14 rounded-full bg-blue-100 mb-4">
+        <FcIdea size={32} />
+      </span>
+    ),
     title: "Educació",
     desc: "Acompanyem el desenvolupament integral amb una educació activa i creativa.",
   },
   {
-    icon: <span className="text-3xl">😊</span>,
+    icon: (
+      <span className="flex items-center justify-center w-14 h-14 rounded-full bg-blue-100 mb-4">
+        <FcLike size={32} />
+      </span>
+    ),
     title: "Afecte",
     desc: "L'afecte i el respecte són la base de la nostra tasca educativa.",
   },
   {
-    icon: <span className="text-3xl">👥</span>,
+    icon: (
+      <span className="flex items-center justify-center w-14 h-14 rounded-full bg-blue-100 mb-4">
+        <FcCollaboration size={32} />
+      </span>
+    ),
     title: "Comunitat",
     desc: "Fomentem la col·laboració i el sentiment de pertinença.",
   },
   {
-    icon: <span className="text-3xl">🚀</span>,
+    icon: (
+      <span className="flex items-center justify-center w-14 h-14 rounded-full bg-blue-100 mb-4">
+        <FcMindMap size={32} />
+      </span>
+    ),
     title: "Innovació",
-    desc: "Apostem per la innovació pedagògica i l’ús de noves metodologies per millorar l’aprenentatge.",
+    desc: "Apostem per la innovació pedagògica i l'ús de noves metodologies per millorar l'aprenentatge.",
   },
 ];
 
@@ -100,19 +125,19 @@ export default function Filosofia() {
           guien el nostre dia a dia.
         </p>
       </div>
-      <div className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-8 relative">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 relative">
         {filosofiaPunts.map((punt, i) => (
           <div
             key={i}
-            className="flex items-start gap-4 bg-gray-50 rounded-xl p-6 shadow hover:shadow-lg transition"
+            className="flex flex-col items-center bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition border border-gray-100"
           >
-            <div>{punt.icon}</div>
-            <div>
-              <h3 className="text-xl font-bold text-bressolsAzul mb-1">
-                {punt.title}
-              </h3>
-              <p className="text-gray-700">{punt.desc}</p>
-            </div>
+            {punt.icon}
+            <h3 className="text-2xl font-bold text-bressolsAzul mb-2 text-center">
+              {punt.title}
+            </h3>
+            <p className="text-gray-700 text-center text-base">
+              {punt.desc}
+            </p>
           </div>
         ))}
       </div>

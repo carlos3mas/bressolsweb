@@ -1,6 +1,7 @@
 "use client";
 
 import CarruselInstalaciones from "@/components/carrusels/CarruselInstalaciones";
+import { BiHomeAlt2, BiBookOpen, BiShieldAlt2 } from "react-icons/bi";
 
 export default function GaleriaInstalaciones() {
   return (
@@ -77,7 +78,7 @@ export default function GaleriaInstalaciones() {
             {/* Característica 1 */}
             <div className="flex items-start gap-6">
               <div className="flex-shrink-0 w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center">
-                {/* icono */}
+                <BiHomeAlt2 size={32} className="text-white" />
               </div>
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-1">
@@ -91,7 +92,7 @@ export default function GaleriaInstalaciones() {
             {/* Característica 2 */}
             <div className="flex items-start gap-6">
               <div className="flex-shrink-0 w-16 h-16 bg-sky-400 rounded-full flex items-center justify-center">
-                {/* icono */}
+                <BiBookOpen size={32} className="text-white" />
               </div>
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-1">
@@ -105,7 +106,7 @@ export default function GaleriaInstalaciones() {
             {/* Característica 3 */}
             <div className="flex items-start gap-6">
               <div className="flex-shrink-0 w-16 h-16 bg-rose-400 rounded-full flex items-center justify-center">
-                {/* icono */}
+                <BiShieldAlt2 size={32} className="text-white" />
               </div>
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-1">
