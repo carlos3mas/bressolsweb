@@ -92,8 +92,8 @@ export default function Filosofia() {
           height={220}
           className="drop-shadow-lg mb-6"
         />
-        <h2 className="text-3xl font-bold text-bressolsAzul mb-2 text-center">
-          La nostra filosofia
+        <h2 className="text-5xl font-bold text-gray-900 mb-16 text-center">
+          LA NOSTRA FILOSOFIA
         </h2>
         <p className="text-lg text-gray-700 text-center max-w-2xl mb-8">
           A Bressols, la nostra filosofia es basa en valors fonamentals que

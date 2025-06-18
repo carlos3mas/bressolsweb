@@ -54,7 +54,7 @@ export default function GaleriaInstalaciones() {
       <div className="container mx-auto px-4 mb-16 relative">
         {/* Main title centered above everything */}
         <h1 className="text-5xl font-bold text-gray-900 mb-16 text-center">
-          Les nostres instal·lacions
+          LES NOSTRES INSTALACIONS
         </h1>
 
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">

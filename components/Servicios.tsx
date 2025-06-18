@@ -15,8 +15,8 @@ export default function Servicios() {
       className="py-16 px-4 sm:px-6 lg:px-8 relative bg-fondo2 text-black "
     >
       <div className="max-w-6xl mx-auto relative text-black relative">
-        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">
-          Serveis
+        <h2 className="text-5xl font-bold text-gray-900 mb-16 text-center">
+          SERVEIS
         </h2>
 
         {/* Activitats extraescolars */}

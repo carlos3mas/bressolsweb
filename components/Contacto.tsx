@@ -13,8 +13,8 @@ export default function Contacto() {
         transition={{ duration: 1.2, ease: "easeOut" }}
         className="max-w-4xl mx-auto text-center relative"
       >
-        <h2 className="text-3xl sm:text-4xl font-bold text-bressolsAzul mb-8">
-          Contacte
+        <h2 className="text-5xl font-bold text-gray-900 mb-16 text-center">
+          CONTACTE
         </h2>
 
         <p className="text-base sm:text-lg text-gray-700 mb-4">

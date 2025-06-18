@@ -53,8 +53,8 @@ export default function QuienesSomos() {
               C.E.I BRESSOLS
             </span>
             <h2 className="text-2xl sm:text-4xl font-bold text-navy-900 mb-6">
-              Som un centre d&apos;educació infantil amb més de 20 anys
-              d&apos;experiència
+              SOM UN CENTRE D&apos;EDUCACIÓ INFANTIL AMB MES DE 20 ANYS D&apos;
+              EXPERIÈNCIA
             </h2>
             <p className="text-gray-600 mb-8 text-base sm:text-lg">
               Ens dediquem a l&apos;educació i dels infants de 0 a 3 anys,
