@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 
 const images = [
   "/foto-clase-3.jpg",
@@ -7,10 +8,10 @@ const images = [
   "/foto-clase-6.jpg",
   "/foto-clase-7.jpg",
   "/foto-clase-2.jpg",
-  "/comedor.png",
+  "/comedor.jpg",
   "/foto-clase.jpg",
   "/foto-clase-5.JPG",
-  "/cocina.jpg"
+  "/cocina.JPG"
 ];
 
 export default function CarruselInstalaciones() {
@@ -19,7 +20,7 @@ export default function CarruselInstalaciones() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % images.length);
-    }, 6000);
+    }, 3500);
     return () => clearInterval(interval);
   }, []);
 
@@ -27,11 +28,13 @@ export default function CarruselInstalaciones() {
   const next = () => setCurrent((current + 1) % images.length);
 
   return (
-    <div className="relative w-full max-w-2xl mx-auto rounded-xl overflow-hidden shadow-lg">
-      <img
+    <div className="relative w-full max-w-4xl mx-auto rounded-xl overflow-hidden shadow-lg">
+      <Image
         src={images[current]}
         alt={`Instalación ${current + 1}`}
-        className="w-full h-96 object-cover transition-all duration-700"
+        className="w-full h-80 sm:h-96 object-cover transition-all duration-700"
+        width={1000}
+        height={1000}
       />
       {/* Controles */}
       <button

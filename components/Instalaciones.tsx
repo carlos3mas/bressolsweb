@@ -2,10 +2,29 @@
 
 import CarruselInstalaciones from "@/components/carrusels/CarruselInstalaciones";
 import { BiHomeAlt2, BiBookOpen, BiShieldAlt2 } from "react-icons/bi";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import RecuadroDecorativo from "./RecuadroDecorativo";
 
 export default function GaleriaInstalaciones() {
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.18 });
+
+  const popVariant = {
+    hidden: { opacity: 0, scale: 0.92, y: 40 },
+    visible: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" as const } },
+  };
+
   return (
-    <section className="py-16 bg-gray-50 relative bg-white">
+    <section className="py-16 bg-gray-50 relative bg-white overflow-hidden">
+      <RecuadroDecorativo
+        texto="Instal·lacions modernes, plurifuncionals, adaptades a la pràctica docent i necessitats dels xiquets."
+        color="naranja"
+        posicion="izquierda"
+        delay={0.4}
+        inView={inView}
+        className="left-4 bottom-6 max-w-sm"
+      />
+
       <div className="custom-shape-divider-top-1750165719">
         <svg
           data-name="Layer 1"
@@ -52,72 +71,91 @@ export default function GaleriaInstalaciones() {
           ></path>
         </svg>
       </div>
-      <div className="container mx-auto px-4 mb-16 relative">
+      <RecuadroDecorativo
+        texto="L'escolarització primerenca permet als alumnes millorar els seus processos cognitius i personals."
+        color="sky"
+        posicion="derecha"
+        delay={0.6}
+        inView={inView}
+        className="right-6 top-32 max-w-sm"
+      />
+
+      <div className="container mx-auto px-4 mb-12 sm:mb-16 relative" ref={ref}>
         {/* Main title centered above everything */}
-        <h1 className="text-5xl font-bold text-gray-900 mb-16 text-center">
+        <h1 className="text-3xl xs:text-4xl sm:text-5xl font-bold text-bressolsAzul mb-8 sm:mb-12 lg:mb-16 text-center">
           LES NOSTRES INSTALACIONS
         </h1>
 
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-center">
           {/* Texto principal a la izquierda */}
-          <div className="flex flex-col items-center md:items-end text-center md:text-center justify-center h-full">
+          <motion.div
+            className="flex flex-col items-center md:items-end text-center md:text-center justify-center h-full"
+            variants={popVariant}
+            initial="hidden"
+            animate={inView ? "visible" : "hidden"}
+          >
             <div>
-              <p className="text-2xl text-gray-800 leading-relaxed font-medium mb-4">
+              <p className="text-lg xs:text-xl sm:text-2xl text-gray-800 leading-relaxed font-medium mb-3 sm:mb-4">
                 A Bressols, cada espai està dissenyat amb cura i dedicació per
                 oferir una experiència educativa excepcional.
               </p>
-              <p className="text-lg text-gray-600">
+              <p className="text-sm xs:text-base sm:text-lg text-gray-600 leading-relaxed">
                 Les nostres aules són més que simples espais: són entorns
                 d&apos;aprenentatge que inspiren, estimulen i protegeixen.
               </p>
             </div>
-          </div>
+          </motion.div>
 
           {/* Características a la derecha */}
-          <div className="flex flex-col space-y-10">
+          <motion.div
+            className="flex flex-col space-y-6 sm:space-y-8 lg:space-y-10"
+            variants={popVariant}
+            initial="hidden"
+            animate={inView ? "visible" : "hidden"}
+          >
             {/* Característica 1 */}
-            <div className="flex items-start gap-6">
-              <div className="flex-shrink-0 w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center">
-                <BiHomeAlt2 size={32} className="text-white" />
+            <div className="flex items-start gap-3 sm:gap-4 lg:gap-6">
+              <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-yellow-400 rounded-full flex items-center justify-center">
+                <BiHomeAlt2 size={28} className="text-white sm:w-7 sm:h-7 lg:w-8 lg:h-8" />
               </div>
               <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-1">
+                <h3 className="text-base xs:text-lg sm:text-xl font-bold text-bressolsAzul mb-1">
                   Espais Adaptats
                 </h3>
-                <p className="text-gray-700">
+                <p className="text-sm xs:text-base text-gray-700 leading-relaxed">
                   Aules específicament dissenyades per a cada grup d&apos;edat.
                 </p>
               </div>
             </div>
             {/* Característica 2 */}
-            <div className="flex items-start gap-6">
-              <div className="flex-shrink-0 w-16 h-16 bg-sky-400 rounded-full flex items-center justify-center">
-                <BiBookOpen size={32} className="text-white" />
+            <div className="flex items-start gap-3 sm:gap-4 lg:gap-6">
+              <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-sky-400 rounded-full flex items-center justify-center">
+                <BiBookOpen size={28} className="text-white sm:w-7 sm:h-7 lg:w-8 lg:h-8" />
               </div>
               <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-1">
+                <h3 className="text-base xs:text-lg sm:text-xl font-bold text-bressolsAzul mb-1">
                   Materials Educatius
                 </h3>
-                <p className="text-gray-700">
+                <p className="text-sm xs:text-base text-gray-700 leading-relaxed">
                   Els millors recursos per estimular l&apos;aprenentatge.
                 </p>
               </div>
             </div>
             {/* Característica 3 */}
-            <div className="flex items-start gap-6">
-              <div className="flex-shrink-0 w-16 h-16 bg-rose-400 rounded-full flex items-center justify-center">
-                <BiShieldAlt2 size={32} className="text-white" />
+            <div className="flex items-start gap-3 sm:gap-4 lg:gap-6">
+              <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-rose-400 rounded-full flex items-center justify-center">
+                <BiShieldAlt2 size={28} className="text-white sm:w-7 sm:h-7 lg:w-8 lg:h-8" />
               </div>
               <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-1">
+                <h3 className="text-base xs:text-lg sm:text-xl font-bold text-bressolsAzul mb-1">
                   Entorn Segur
                 </h3>
-                <p className="text-gray-700">
+                <p className="text-sm xs:text-base text-gray-700 leading-relaxed">
                   Instal·lacions amb totes les mesures de seguretat.
                 </p>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
 

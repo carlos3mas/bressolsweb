@@ -32,14 +32,14 @@ export default function HeroCarousel() {
 
       {/* Texto fijo al centro */}
       <div className="absolute inset-0 flex flex-col items-center justify-center text-bressols z-10 px-4">
-        <h1 className="text-2xl sm:text-4xl md:text-6xl font-bold mb-4 text-center">
-          <span className="border-2 sm:border-4 border-bressols px-3 sm:px-6 py-2 sm:py-3 rounded-lg shadow-2xl bg-black/30">
+        <h1 className="text-xl xs:text-2xl sm:text-4xl md:text-6xl font-bold mb-4 text-center">
+          <span className="border-2 sm:border-4 border-bressols px-2 xs:px-3 sm:px-6 py-1.5 xs:py-2 sm:py-3 rounded-lg shadow-2xl bg-black/30">
             C.E.I. BRESSOLS
           </span>
         </h1>
         <a
           href="#contacte"
-          className="inline-block px-4 py-2 sm:px-8 sm:py-3 mt-4 text-base sm:text-lg font-semibold rounded-full bg-bressolsAzul text-white shadow-lg hover:bg-bressolsAzul/90 transition-colors duration-200"
+          className="inline-block px-4 py-2 sm:px-8 sm:py-3 mt-2 sm:mt-4 text-sm xs:text-base sm:text-lg font-semibold rounded-full bg-bressolsAzul text-white shadow-lg hover:bg-bressolsAzul/90 transition-colors duration-200"
         >
           CONTACTA AMB NOSALTRES
         </a>

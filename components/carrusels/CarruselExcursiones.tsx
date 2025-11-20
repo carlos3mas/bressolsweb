@@ -3,9 +3,15 @@
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
 
-const imagenes = ['/comedor.jpg', '/cocina.jpg', '/descanso.jpg']
+const imagenes = [
+  '/excursion-1.jpg',
+  '/actividad-1.jpg',
+  '/hero1.jpg',
+  '/hero2.jpg',
+  '/hero3.jpg',
+]
 
-export default function CarruselClases() {
+export default function CarruselExcursiones() {
   const [indiceActual, setIndiceActual] = useState(0)
 
   useEffect(() => {
@@ -28,13 +34,12 @@ export default function CarruselClases() {
     <div className="w-full md:w-1/2 relative h-64 sm:h-80 overflow-hidden rounded-lg shadow-lg">
       <Image
         src={imagenes[indiceActual]}
-        alt={`Foto servei ${indiceActual + 1}`}
+        alt={`Foto excursió ${indiceActual + 1}`}
         fill
         className="object-cover rounded-lg transition-opacity duration-500"
         priority
       />
 
-      {/* Botones manuales */}
       <button
         onClick={retroceder}
         className="absolute top-1/2 left-2 transform -translate-y-1/2 bg-white/70 hover:bg-white p-1 rounded-full shadow-md"
@@ -48,7 +53,6 @@ export default function CarruselClases() {
         ▶
       </button>
 
-      {/* Indicadores */}
       <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-1">
         {imagenes.map((_, i) => (
           <div
@@ -62,3 +66,4 @@ export default function CarruselClases() {
     </div>
   )
 }
+

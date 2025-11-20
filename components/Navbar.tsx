@@ -61,7 +61,7 @@ export default function Navbar() {
             href="#filosofia"
             className="px-4 py-2 rounded-md text-bressolsAzul font-medium transition hover:bg-bressolsAzul hover:text-bressols"
           >
-            Filosofia
+            Metodologia
           </a>
           <a
             href="#contacte"

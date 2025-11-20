@@ -1,5 +1,8 @@
 import Image from "next/image";
 import { FcLock, FcLike, FcIdea, FcCollaboration, FcApproval, FcMindMap } from "react-icons/fc";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import RecuadroDecorativo from "./RecuadroDecorativo";
 // Si no tienes react-icons instalado, usa emojis como iconos:
 // import { FaHandsHelping, FaShieldAlt, FaLightbulb, FaSmile, FaUsers } from "react-icons/fa";
 
@@ -61,8 +64,24 @@ const filosofiaPunts = [
 ];
 
 export default function Filosofia() {
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.15 });
+
+  const popVariant = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.7, ease: "easeOut" as const } },
+  };
+
   return (
-    <section className="py-16 bg-white relative">
+    <section className="py-16 bg-white relative overflow-hidden">
+      <RecuadroDecorativo
+        texto="Crear un ambient on els xiquets puguen aprendre jugant i on tot es vehicula per a la seua relació íntegra com a persones."
+        color="verde"
+        posicion="izquierda"
+        top="top-16"
+        delay={0.5}
+        inView={inView}
+      />
+
       <div className="custom-shape-divider-bottom-1750165793">
         <svg
           data-name="Layer 1"
@@ -109,38 +128,53 @@ export default function Filosofia() {
           ></path>
         </svg>
       </div>
-      <div className="flex flex-col items-center mb-10 relative">
+      <div className="flex flex-col items-center mb-6 sm:mb-10 relative px-4">
         <Image
           src="/pegatina.png"
           alt="Seguretat, Confiança, Educació"
-          width={220}
-          height={220}
-          className="drop-shadow-lg mb-6"
+          width={180}
+          height={180}
+          className="drop-shadow-lg mb-4 sm:mb-6 w-[150px] h-[150px] xs:w-[180px] xs:h-[180px] sm:w-[220px] sm:h-[220px]"
         />
-        <h2 className="text-5xl font-bold text-gray-900 mb-16 text-center">
-          LA NOSTRA FILOSOFIA
+        <h2 className="text-3xl xs:text-4xl sm:text-5xl font-bold text-gray-900 mb-8 sm:mb-12 lg:mb-16 text-center">
+          LA NOSTRA METODOLOGIA
         </h2>
-        <p className="text-lg text-gray-700 text-center max-w-2xl mb-8">
-          A Bressols, la nostra filosofia es basa en valors fonamentals que
+        <RecuadroDecorativo
+          texto="Aprendre a ser i aprendre a fer."
+          color="rojo"
+          posicion="derecha"
+          delay={0.4}
+          inView={inView}
+          className="right-4 top-full mt-0 max-w-xs"
+        />
+        <p className="text-sm xs:text-base sm:text-lg text-gray-700 text-center max-w-2xl mb-6 sm:mb-8 leading-relaxed">
+          A Bressols, la nostra metodologia es basa en valors fonamentals que
           guien el nostre dia a dia.
         </p>
       </div>
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 relative">
+      <motion.div
+        className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 relative px-4"
+        variants={popVariant}
+        initial="hidden"
+        animate={inView ? "visible" : "hidden"}
+        ref={ref}
+      >
         {filosofiaPunts.map((punt, i) => (
-          <div
+          <motion.div
             key={i}
-            className="flex flex-col items-center bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition border border-gray-100"
+            className="flex flex-col items-center bg-white rounded-2xl p-4 xs:p-6 sm:p-8 shadow-md hover:shadow-xl transition border border-gray-100"
+            variants={popVariant}
           >
             {punt.icon}
-            <h3 className="text-2xl font-bold text-bressolsAzul mb-2 text-center">
+            <h3 className="text-lg xs:text-xl sm:text-2xl font-bold text-bressolsAzul mb-2 text-center">
               {punt.title}
             </h3>
-            <p className="text-gray-700 text-center text-base">
+            <p className="text-gray-700 text-center text-sm xs:text-base leading-relaxed">
               {punt.desc}
             </p>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 }
