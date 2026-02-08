@@ -12,26 +12,27 @@ interface RecuadroDecorativoProps {
   inView: boolean
   maxWidth?: string
   className?: string
+  destacado?: boolean
 }
 
 const colores = {
   azul: 'bg-blue-600',
-  naranja: 'bg-orange-500',
-  rojo: 'bg-red-600',
-  fucsia: 'bg-fuchsia-700',
-  verde: 'bg-green-600',
-  morado: 'bg-purple-700',
+  naranja: 'bg-amber-500',
+  rojo: 'bg-red-500',
+  fucsia: 'bg-pink-500',
+  verde: 'bg-teal-600',
+  morado: 'bg-purple-600',
   sky: 'bg-sky-600'
 }
 
 const coloresClaro = {
-  azul: 'bg-blue-200',
-  naranja: 'bg-orange-200',
-  rojo: 'bg-red-200',
-  fucsia: 'bg-fuchsia-200',
-  verde: 'bg-green-200',
-  morado: 'bg-purple-200',
-  sky: 'bg-sky-200'
+  azul: 'bg-blue-100',
+  naranja: 'bg-amber-100',
+  rojo: 'bg-red-100',
+  fucsia: 'bg-pink-100',
+  verde: 'bg-teal-100',
+  morado: 'bg-purple-100',
+  sky: 'bg-sky-100'
 }
 
 export default function RecuadroDecorativo({
@@ -44,61 +45,41 @@ export default function RecuadroDecorativo({
   inView,
   maxWidth = 'max-w-xs',
   className,
+  destacado = false,
 }: RecuadroDecorativoProps) {
   const rotacion = posicion === 'izquierda' ? -2 : 2
   const xInicial = posicion === 'izquierda' ? -100 : 100
 
-  // Clip-path irregular para forma más orgánica
+  // Clip-path más redondeado y suave
   const clipPath = posicion === 'izquierda'
-    ? 'polygon(0% 0%, 95% 2%, 100% 8%, 98% 95%, 3% 100%, 0% 92%)'
-    : 'polygon(5% 0%, 100% 2%, 97% 8%, 100% 95%, 5% 100%, 0% 92%)'
+    ? 'polygon(2% 5%, 98% 0%, 100% 5%, 98% 95%, 95% 100%, 0% 95%)'
+    : 'polygon(2% 0%, 98% 5%, 100% 95%, 95% 100%, 5% 100%, 0% 95%)'
 
   const defaultPosition = `${posicion === 'izquierda' ? 'left-4 xl:left-8' : 'right-4 xl:right-8'} ${top || ''} ${bottom || ''}`.trim()
   const positionClasses = className ? className : `${defaultPosition} ${maxWidth}`.trim()
 
+  const isRelative = className?.includes('relative');
+  const escala = destacado ? 1.15 : 1;
+  const padding = destacado ? 'px-8 py-10' : 'px-6 py-8';
+  const fontSize = destacado ? 'text-lg sm:text-xl' : 'text-base';
+  const borderWidth = destacado ? 'border-4' : 'border-2';
+  
   return (
     <motion.div
       initial={{ opacity: 0, x: xInicial, y: 20, scale: 0.9 }}
-      animate={inView ? { opacity: 1, x: 0, y: 0, scale: 1 } : {}}
+      animate={inView ? { opacity: 1, x: 0, y: 0, scale: escala } : {}}
       transition={{ duration: 0.8, delay, ease: 'easeOut' }}
-      className={`hidden lg:block absolute ${positionClasses} z-10 pointer-events-none`}
+      className={`${isRelative ? 'block' : 'hidden lg:block absolute'} ${positionClasses} z-10 pointer-events-none`}
       style={{ transform: `rotate(${rotacion}deg)` }}
     >
-      {/* Fondo más claro para efecto 3D - más separado */}
+      {/* Recuadro principal con forma redondeada */}
       <div
-        className={`absolute inset-0 ${coloresClaro[color]} opacity-70 blur-xl`}
+        className={`relative ${colores[color]} text-white ${padding} rounded-3xl shadow-lg pointer-events-auto ${borderWidth} border-white/30`}
         style={{
-          clipPath,
-          transform: `translate(12px, 12px) rotate(${rotacion}deg)`,
-        }}
-      />
-      
-      {/* Sombra intermedia para más profundidad */}
-      <div
-        className={`absolute inset-0 ${coloresClaro[color]} opacity-50 blur-lg`}
-        style={{
-          clipPath,
-          transform: `translate(6px, 6px) rotate(${rotacion}deg)`,
-        }}
-      />
-      
-      {/* Sombra más cercana para efecto de capas */}
-      <div
-        className={`absolute inset-0 ${coloresClaro[color]} opacity-30 blur-sm`}
-        style={{
-          clipPath,
-          transform: `translate(3px, 3px) rotate(${rotacion}deg)`,
-        }}
-      />
-      
-      {/* Recuadro principal con forma irregular */}
-      <div
-        className={`relative ${colores[color]} text-white px-6 py-8 shadow-2xl transition-all duration-300 hover:scale-105 pointer-events-auto border-2 border-white/20`}
-        style={{
-          clipPath,
+          borderRadius: '24px',
         }}
       >
-        <p className="text-base font-medium leading-relaxed relative z-10">
+        <p className={`${fontSize} ${destacado ? 'font-bold' : 'font-medium'} leading-relaxed relative z-10`}>
           {texto}
         </p>
       </div>

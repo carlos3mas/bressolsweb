@@ -8,14 +8,6 @@ export default function Contacto() {
 
   return (
     <section id="contacte" className="py-12 xs:py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-fondo relative">
-      <RecuadroDecorativo
-        texto="Seguiment continuat del procés educatiu, a fi d'estar permanentment informats de l'evolució del seu fill i poder intervindre de forma immediata en cas d'haver problemes."
-        color="morado"
-        posicion="derecha"
-        delay={0.6}
-        inView={inView}
-        className="right-4 top-32 max-w-md"
-      />
       <motion.div
         ref={ref}
         initial={{ opacity: 0, y: 120 }}
@@ -86,6 +78,26 @@ export default function Contacto() {
               />
             </div>
           </div>
+        </div>
+
+        {/* Bocadillos centrados al final */}
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-8 mt-12 sm:mt-16">
+          <RecuadroDecorativo
+            texto="Seguiment continuat del procés educatiu, a fi d'estar permanentment informats de l'evolució del seu fill."
+            color="morado"
+            posicion="izquierda"
+            delay={0.4}
+            inView={inView}
+            className="relative left-0 right-0 max-w-sm"
+          />
+          <RecuadroDecorativo
+            texto="Horari d'atenció: dilluns a divendres de 8:30 a 18:00."
+            color="azul"
+            posicion="derecha"
+            delay={0.6}
+            inView={inView}
+            className="relative left-0 right-0 max-w-sm"
+          />
         </div>
       </motion.div>
     </section>

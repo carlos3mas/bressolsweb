@@ -16,14 +16,6 @@ export default function GaleriaInstalaciones() {
 
   return (
     <section className="py-16 bg-gray-50 relative bg-white overflow-hidden">
-      <RecuadroDecorativo
-        texto="Instal·lacions modernes, plurifuncionals, adaptades a la pràctica docent i necessitats dels xiquets."
-        color="naranja"
-        posicion="izquierda"
-        delay={0.4}
-        inView={inView}
-        className="left-4 bottom-6 max-w-sm"
-      />
 
       <div className="custom-shape-divider-top-1750165719">
         <svg
@@ -71,14 +63,6 @@ export default function GaleriaInstalaciones() {
           ></path>
         </svg>
       </div>
-      <RecuadroDecorativo
-        texto="L'escolarització primerenca permet als alumnes millorar els seus processos cognitius i personals."
-        color="sky"
-        posicion="derecha"
-        delay={0.6}
-        inView={inView}
-        className="right-6 top-32 max-w-sm"
-      />
 
       <div className="container mx-auto px-4 mb-12 sm:mb-16 relative" ref={ref}>
         {/* Main title centered above everything */}
@@ -160,6 +144,26 @@ export default function GaleriaInstalaciones() {
       </div>
 
       <CarruselInstalaciones />
+
+      {/* Bocadillos centrados al final */}
+      <div className="flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-8 mt-12 sm:mt-16 px-4 pb-8">
+        <RecuadroDecorativo
+          texto="Instal·lacions modernes, plurifuncionals, adaptades a la pràctica docent i necessitats dels xiquets."
+          color="naranja"
+          posicion="izquierda"
+          delay={0.4}
+          inView={inView}
+          className="relative left-0 right-0 max-w-sm"
+        />
+        <RecuadroDecorativo
+          texto="L'escolarització primerenca permet als alumnes millorar els seus processos cognitius i personals."
+          color="sky"
+          posicion="derecha"
+          delay={0.6}
+          inView={inView}
+          className="relative left-0 right-0 max-w-sm"
+        />
+      </div>
     </section>
   );
 }

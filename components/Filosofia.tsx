@@ -73,14 +73,6 @@ export default function Filosofia() {
 
   return (
     <section className="py-16 bg-white relative overflow-hidden">
-      <RecuadroDecorativo
-        texto="Crear un ambient on els xiquets puguen aprendre jugant i on tot es vehicula per a la seua relació íntegra com a persones."
-        color="verde"
-        posicion="izquierda"
-        top="top-16"
-        delay={0.5}
-        inView={inView}
-      />
 
       <div className="custom-shape-divider-bottom-1750165793">
         <svg
@@ -130,8 +122,8 @@ export default function Filosofia() {
       </div>
       <div className="flex flex-col items-center mb-6 sm:mb-10 relative px-4">
         <Image
-          src="/pegatina.png"
-          alt="Seguretat, Confiança, Educació"
+          src="/foto-equip.png"
+          alt="Equip de professionals de Bressols"
           width={180}
           height={180}
           className="drop-shadow-lg mb-4 sm:mb-6 w-[150px] h-[150px] xs:w-[180px] xs:h-[180px] sm:w-[220px] sm:h-[220px]"
@@ -139,21 +131,13 @@ export default function Filosofia() {
         <h2 className="text-3xl xs:text-4xl sm:text-5xl font-bold text-gray-900 mb-8 sm:mb-12 lg:mb-16 text-center">
           LA NOSTRA METODOLOGIA
         </h2>
-        <RecuadroDecorativo
-          texto="Aprendre a ser i aprendre a fer."
-          color="rojo"
-          posicion="derecha"
-          delay={0.4}
-          inView={inView}
-          className="right-4 top-full mt-0 max-w-xs"
-        />
         <p className="text-sm xs:text-base sm:text-lg text-gray-700 text-center max-w-2xl mb-6 sm:mb-8 leading-relaxed">
           A Bressols, la nostra metodologia es basa en valors fonamentals que
           guien el nostre dia a dia.
         </p>
       </div>
       <motion.div
-        className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 relative px-4"
+        className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 relative px-4 mb-12 sm:mb-16"
         variants={popVariant}
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
@@ -175,6 +159,19 @@ export default function Filosofia() {
           </motion.div>
         ))}
       </motion.div>
+
+      {/* Bocadillo destacado centrado al final */}
+      <div className="flex justify-center items-center mt-12 sm:mt-16 px-4 pb-8">
+        <RecuadroDecorativo
+          texto="Aprendre a ser i aprendre a fer."
+          color="rojo"
+          posicion="derecha"
+          delay={0.4}
+          inView={inView}
+          className="relative left-0 right-0 max-w-md"
+          destacado={true}
+        />
+      </div>
     </section>
   );
 }

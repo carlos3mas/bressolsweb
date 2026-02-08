@@ -15,15 +15,6 @@ export default function QuienesSomos() {
 
   return (
     <section className="py-16 bg-fondo relative overflow-hidden" ref={ref}>
-      <RecuadroDecorativo
-        texto="Docents professionals que es fan responsables de la formació i de l'educació dels alumnes."
-        color="azul"
-        posicion="izquierda"
-        delay={0.3}
-        inView={inView}
-        className="left-4 bottom-4 max-w-sm"
-      />
-
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center gap-12">
           {/* Imágenes lado izquierdo */}
@@ -104,6 +95,26 @@ export default function QuienesSomos() {
               CONTACTA AMB NOSALTRES
             </Link>
           </motion.div>
+        </div>
+
+        {/* Bocadillos centrados al final */}
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-8 mt-12 sm:mt-16 px-4">
+          <RecuadroDecorativo
+            texto="Docents professionals que es fan responsables de la formació i de l'educació dels alumnes."
+            color="azul"
+            posicion="izquierda"
+            delay={0.3}
+            inView={inView}
+            className="relative left-0 right-0 max-w-sm"
+          />
+          <RecuadroDecorativo
+            texto="Més de 20 anys d'experiència educant infants de 0 a 3 anys."
+            color="sky"
+            posicion="derecha"
+            delay={0.5}
+            inView={inView}
+            className="relative left-0 right-0 max-w-sm"
+          />
         </div>
       </div>
     </section>

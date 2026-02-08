@@ -17,23 +17,6 @@ export default function Servicios() {
       id="serveis"
       className="py-16 px-4 sm:px-6 lg:px-8 relative bg-fondo2 text-black overflow-hidden"
     >
-      <RecuadroDecorativo
-        texto="Respondre en la mesura que siga possible, les noves necessitats de la família moderna."
-        color="rojo"
-        posicion="derecha"
-        delay={0.4}
-        inView={inView1}
-        className="right-6 top-20 max-w-md"
-      />
-
-      <RecuadroDecorativo
-        texto="Donem la màxima importància a l'aprenentatge de les tres llengües: valencià, castellà i anglès."
-        color="naranja"
-        posicion="izquierda"
-        delay={0.5}
-        inView={inView1}
-        className="left-2 sm:left-4 lg:left-6 top-1/2 max-w-md"
-      />
 
       <div className="max-w-6xl mx-auto relative text-black relative">
         <h2 className="text-3xl xs:text-4xl sm:text-5xl font-bold text-bressolsAzul mb-8 sm:mb-12 lg:mb-16 text-center">
@@ -135,16 +118,27 @@ export default function Servicios() {
             </p>
           </div>
         </motion.div>
-      </div>
 
-      <RecuadroDecorativo
-        texto="Es preparen programes de revisions odontològiques, podològiques i psicològiques."
-        color="fucsia"
-        posicion="derecha"
-        delay={0.3}
-        inView={inView3}
-        className="right-6 bottom-6 max-w-sm"
-      />
+        {/* Bocadillos centrados al final */}
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-8 mt-12 sm:mt-16">
+          <RecuadroDecorativo
+            texto="Donem la màxima importància a l'aprenentatge de les tres llengües: valencià, castellà i anglès."
+            color="naranja"
+            posicion="izquierda"
+            delay={0.4}
+            inView={inView3}
+            className="relative left-0 right-0 max-w-sm"
+          />
+          <RecuadroDecorativo
+            texto="Crear un ambient on els xiquets puguen aprendre jugant i on tot es vehicula per a la seua relació íntegra com a persones."
+            color="verde"
+            posicion="derecha"
+            delay={0.6}
+            inView={inView3}
+            className="relative left-0 right-0 max-w-sm"
+          />
+        </div>
+      </div>
     </section>
   );
 }
