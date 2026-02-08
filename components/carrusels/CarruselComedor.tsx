@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
 
-const imagenes = ['/comedor.jpg', '/cocina.jpg', '/descanso.jpg']
+const imagenes = ['/comedor.jpg', '/cocina.JPG', '/descanso.jpg']
 
 export default function CarruselClases() {
   const [indiceActual, setIndiceActual] = useState(0)
