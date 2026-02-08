@@ -60,7 +60,7 @@ export default function Contacto() {
 
             <div className="border border-dashed border-bressolsAzul/40 p-4 sm:p-5 rounded-2xl text-xs xs:text-sm text-gray-600 leading-relaxed">
               <p>
-                Horari d&apos;atenció: dilluns a divendres de 8:30 a 18:00. Si ens
+                Horari d&apos;atenció: dilluns a divendres de 7:45 a 17:00. Si ens
                 escrius fora d&apos;aquest horari, et respondrem el més prompte possible.
               </p>
             </div>
@@ -91,7 +91,7 @@ export default function Contacto() {
             className="relative left-0 right-0 max-w-sm"
           />
           <RecuadroDecorativo
-            texto="Horari d'atenció: dilluns a divendres de 8:30 a 18:00."
+            texto="Horari d'atenció: dilluns a divendres de 7:45 a 17:00."
             color="azul"
             posicion="derecha"
             delay={0.6}

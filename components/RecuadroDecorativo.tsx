@@ -25,15 +25,7 @@ const colores = {
   sky: 'bg-sky-600'
 }
 
-const coloresClaro = {
-  azul: 'bg-blue-100',
-  naranja: 'bg-amber-100',
-  rojo: 'bg-red-100',
-  fucsia: 'bg-pink-100',
-  verde: 'bg-teal-100',
-  morado: 'bg-purple-100',
-  sky: 'bg-sky-100'
-}
+
 
 export default function RecuadroDecorativo({
   texto,
@@ -50,10 +42,7 @@ export default function RecuadroDecorativo({
   const rotacion = posicion === 'izquierda' ? -2 : 2
   const xInicial = posicion === 'izquierda' ? -100 : 100
 
-  // Clip-path más redondeado y suave
-  const clipPath = posicion === 'izquierda'
-    ? 'polygon(2% 5%, 98% 0%, 100% 5%, 98% 95%, 95% 100%, 0% 95%)'
-    : 'polygon(2% 0%, 98% 5%, 100% 95%, 95% 100%, 5% 100%, 0% 95%)'
+
 
   const defaultPosition = `${posicion === 'izquierda' ? 'left-4 xl:left-8' : 'right-4 xl:right-8'} ${top || ''} ${bottom || ''}`.trim()
   const positionClasses = className ? className : `${defaultPosition} ${maxWidth}`.trim()
