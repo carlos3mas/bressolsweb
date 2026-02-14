@@ -112,7 +112,7 @@ export default function Servicios() {
               Transport escolar
             </h1>
             <p className="text-sm xs:text-base sm:text-lg text-justify leading-relaxed">
-              Disposem de transport escolar per facilitar la conciliació familiar d&apos;una manera segura, còmoda i puntual.
+              Disposem de transport escolar per facilitar la conciliació familiar d&apos;una manera segura i còmoda.
             </p>
           </div>
         </motion.div>
