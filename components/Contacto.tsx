@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import SocialLinks from "./SocialLinks";
-import RecuadroDecorativo from "./RecuadroDecorativo";
+
 
 export default function Contacto() {
   const [ref, inView] = useInView({ triggerOnce: false, threshold: 0.2 });
