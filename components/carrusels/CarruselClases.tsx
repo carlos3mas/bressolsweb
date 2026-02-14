@@ -25,13 +25,6 @@ export default function CarruselClases() {
     return () => clearInterval(intervalo)
   }, [])
 
-  const avanzar = () => {
-    setIndiceActual((prev) => (prev + 1) % imagenes.length)
-  }
-
-  const retroceder = () => {
-    setIndiceActual((prev) => (prev - 1 + imagenes.length) % imagenes.length)
-  }
 
   return (
     <div className="w-full md:w-1/2 relative h-64 sm:h-80 overflow-hidden rounded-lg shadow-lg">
@@ -43,19 +36,6 @@ export default function CarruselClases() {
         priority
       />
 
-      {/* Botones manuales (opcional) */}
-      <button
-        onClick={retroceder}
-        className="absolute top-1/2 left-2 transform -translate-y-1/2 bg-white/70 hover:bg-white p-1 rounded-full shadow-md"
-      >
-        ◀
-      </button>
-      <button
-        onClick={avanzar}
-        className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-white/70 hover:bg-white p-1 rounded-full shadow-md"
-      >
-        ▶
-      </button>
 
       {/* Indicadores */}
       <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-1">

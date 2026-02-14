@@ -39,7 +39,7 @@ export default function Servicios() {
             <p className="text-sm xs:text-base sm:text-lg text-justify leading-relaxed">
               Oferim una àmplia gamma d&apos;activitats
               pensades per estimular el desenvolupament integral dels
-              infants. Tallers creatius, música, psicomotricitat i molt més!
+              menuts. Tallers creatius, música, psicomotricitat i molt més!
             </p>
           </div>
         </motion.div>
@@ -81,10 +81,10 @@ export default function Servicios() {
               Servei de menjador y descans
             </h1>
             <p className="text-sm xs:text-base sm:text-lg text-justify leading-relaxed">
-              Comptem amb servei de menjador propi amb menús equilibrats i
+              Comptem amb servei de menjador amb cuina propia menús equilibrats i
               adaptats a les necessitats de cada etapa. Fomentem hàbits
               alimentaris saludables i oferim una zona de descans acollidora
-              perquè puguin relaxar-se després de l&apos;àpat i recuperar
+              perquè puguin relaxar-se després de dinar i recuperar
               energies.
             </p>
           </div>
@@ -112,9 +112,7 @@ export default function Servicios() {
               Transport escolar
             </h1>
             <p className="text-sm xs:text-base sm:text-lg text-justify leading-relaxed">
-              Disposem de transport escolar per facilitar la conciliació
-              familiar i garantir l&apos;accés al centre d&apos;una manera
-              segura, còmoda i puntual.
+              Disposem de transport escolar per facilitar la conciliació familiar d&apos;una manera segura, còmoda i puntual.
             </p>
           </div>
         </motion.div>

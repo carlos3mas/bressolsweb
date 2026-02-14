@@ -24,7 +24,7 @@ export default function Contacto() {
           </h2>
           <p className="text-sm xs:text-base sm:text-lg text-gray-600 mt-3 sm:mt-4 max-w-2xl mx-auto leading-relaxed px-2">
             Ens encanta acompanyar-te en cada pas. Vine a visitar-nos o posa&apos;t en
-            contacte per telèfon, correu o xarxes socials. Responem molt ràpid!
+            contacte per telèfon o correu. Responem molt ràpid!
           </p>
         </div>
 
@@ -53,7 +53,7 @@ export default function Contacto() {
                 Xarxes socials
               </h4>
               <p className="text-gray-700 text-sm xs:text-base leading-relaxed">
-                Comparteix moments i descobreix tot el que fem al centre.
+                Descobeix tot el que fem al centre.
               </p>
               <SocialLinks className="justify-start mt-4 sm:mt-5 text-bressolsAzul" iconClassName="w-7 h-7 xs:w-8 xs:h-8" />
             </div>
@@ -81,24 +81,7 @@ export default function Contacto() {
         </div>
 
         {/* Bocadillos centrados al final */}
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-8 mt-12 sm:mt-16">
-          <RecuadroDecorativo
-            texto="Seguiment continuat del procés educatiu, a fi d'estar permanentment informats de l'evolució del seu fill."
-            color="morado"
-            posicion="izquierda"
-            delay={0.4}
-            inView={inView}
-            className="relative left-0 right-0 max-w-sm"
-          />
-          <RecuadroDecorativo
-            texto="Horari d'atenció: dilluns a divendres de 7:45 a 17:00."
-            color="azul"
-            posicion="derecha"
-            delay={0.6}
-            inView={inView}
-            className="relative left-0 right-0 max-w-sm"
-          />
-        </div>
+
       </motion.div>
     </section>
   );

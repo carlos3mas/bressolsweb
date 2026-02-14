@@ -16,7 +16,7 @@ export default function Home() {
         <title>C.E.I Bressols - Centre d&apos;Educació Infantil a Onda, Castelló</title>
         <meta
           name="description"
-          content="Centre autoritzat d&apos;Educació Infantil a Onda. Més de 20 anys d&apos;experiència educant infants de 0 a 3 anys. Instal·lacions modernes, menjador propi i educació trilingüe."
+          content="Centre autoritzat d&apos;Educació Infantil a Onda. Més de 25 anys d&apos;experiència educant menuts de 0 a 3 anys. Instal·lacions modernes, menjador propi i educació trilingüe."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="keywords" content="guardería Onda, escuela infantil Castellón, educación infantil, CEI Bressols, guardería 0-3 años, educación trilingüe" />
@@ -24,13 +24,13 @@ export default function Home() {
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:title" content="C.E.I Bressols - Centre d&apos;Educació Infantil" />
-        <meta property="og:description" content="Centre autoritzat amb més de 20 anys d&apos;experiència educant infants de 0 a 3 anys a Onda, Castelló." />
+        <meta property="og:description" content="Centre autoritzat amb més de 25 anys d&apos;experiència educant menuts de 0 a 3 anys a Onda, Castelló." />
         <meta property="og:image" content="/logo.jpg" />
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="C.E.I Bressols - Centre d&apos;Educació Infantil" />
-        <meta name="twitter:description" content="Centre autoritzat amb més de 20 anys d&apos;experiència educant infants." />
+        <meta name="twitter:description" content="Centre autoritzat amb més de 25 anys d&apos;experiència educant menuts." />
         <meta name="twitter:image" content="/logo.jpg" />
         
         <link rel="icon" href="/logo.jpg" />

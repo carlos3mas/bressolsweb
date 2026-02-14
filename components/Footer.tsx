@@ -11,11 +11,11 @@ export default function Footer() {
               C.E.I. Bressols
             </p>
             <h3 className="text-lg xs:text-xl sm:text-2xl font-semibold text-gray-900 leading-tight">
-              Creant lligams des de la primera infància
+              Creant enllaços des de la infància
             </h3>
             <p className="text-sm xs:text-base text-gray-700 leading-relaxed">
               Espai educatiu homologat i subvencionat per la Conselleria
-              d&apos;Educació. Acompanyem famílies i infants amb una metodologia
+              d&apos;Educació. Acompanyem famílies i menuts amb una metodologia
               basada en l&apos;afecte, el joc i el respecte pels ritmes.
             </p>
           </div>

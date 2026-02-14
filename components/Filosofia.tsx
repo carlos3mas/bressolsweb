@@ -14,7 +14,7 @@ const filosofiaPunts = [
       </span>
     ),
     title: "Seguretat",
-    desc: "Un entorn segur on cada infant pot créixer i aprendre amb tranquil·litat.",
+    desc: "Un entorn segur on cada menut pot créixer i aprendre amb tranquil·litat.",
   },
   {
     icon: (
@@ -23,7 +23,7 @@ const filosofiaPunts = [
       </span>
     ),
     title: "Confiança",
-    desc: "Relació propera i de confiança amb les famílies i els infants.",
+    desc: "Relació propera i de confiança amb les famílies i els menuts.",
   },
   {
     icon: (
@@ -129,11 +129,10 @@ export default function Filosofia() {
           className="drop-shadow-lg mb-4 sm:mb-6 w-[150px] h-[150px] xs:w-[180px] xs:h-[180px] sm:w-[220px] sm:h-[220px]"
         />
         <h2 className="text-3xl xs:text-4xl sm:text-5xl font-bold text-gray-900 mb-8 sm:mb-12 lg:mb-16 text-center">
-          LA NOSTRA METODOLOGIA
+          VALORS
         </h2>
         <p className="text-sm xs:text-base sm:text-lg text-gray-700 text-center max-w-2xl mb-6 sm:mb-8 leading-relaxed">
-          A Bressols, la nostra metodologia es basa en valors fonamentals que
-          guien el nostre dia a dia.
+          A Bressols es treballa amb valors fonamentals que guien el nostre dia a dia.
         </p>
       </div>
       <motion.div

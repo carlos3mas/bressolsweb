@@ -24,8 +24,6 @@ export default function CarruselInstalaciones() {
     return () => clearInterval(interval);
   }, []);
 
-  const prev = () => setCurrent((current - 1 + images.length) % images.length);
-  const next = () => setCurrent((current + 1) % images.length);
 
   return (
     <div className="relative w-full max-w-4xl mx-auto rounded-xl overflow-hidden shadow-lg">
@@ -36,21 +34,6 @@ export default function CarruselInstalaciones() {
         width={1000}
         height={1000}
       />
-      {/* Controles */}
-      <button
-        onClick={prev}
-        className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white rounded-full p-2 shadow"
-        aria-label="Anterior"
-      >
-        &#8592;
-      </button>
-      <button
-        onClick={next}
-        className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white rounded-full p-2 shadow"
-        aria-label="Siguiente"
-      >
-        &#8594;
-      </button>
       {/* Indicadores */}
       <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-2">
         {images.map((_, i) => (

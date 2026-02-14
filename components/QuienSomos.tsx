@@ -16,7 +16,7 @@ export default function QuienesSomos() {
   return (
     <section className="py-16 bg-fondo relative overflow-hidden" ref={ref}>
       <div className="container mx-auto px-4">
-        <div className="flex flex-col lg:flex-row items-center gap-12">
+        <div className="flex flex-col-reverse lg:flex-row items-center gap-y-20 lg:gap-12">
           {/* Imágenes lado izquierdo */}
           <motion.div
             className="lg:w-1/2 w-full relative"
@@ -26,10 +26,10 @@ export default function QuienesSomos() {
           >
             <div className="relative w-full h-[380px] xs:h-[420px] sm:h-[600px] rounded-2xl overflow-visible p-2 sm:p-4">
               {/* Updated circle with correct color and position */}
-              <div className="hidden sm:block absolute left-[60%] top-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[400px] h-[300px] sm:h-[400px] bg-bressolsAzul rounded-full z-0"></div>
+              <div className="hidden sm:block absolute left-[60%] top-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] bg-bressolsAzul rounded-full z-0"></div>
               <div className="relative grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4 h-full">
                 {/* First image */}
-                <div className="relative h-[100px] xs:h-[120px] sm:h-[250px] w-full sm:w-[350px] rounded-xl overflow-hidden z-10 transition-all duration-300 hover:scale-105 hover:-rotate-2 hover:shadow-xl transform sm:-translate-y-4">
+                <div className="relative h-[100px] xs:h-[120px] sm:h-[250px] w-full sm:w-[350px] rounded-xl overflow-hidden z-10 transition-all duration-300 md:hover:scale-105 md:hover:-rotate-2 md:hover:shadow-xl transform sm:-translate-y-4">
                   <Image
                     src="/foto-centro.jpg"
                     alt="Exterior del centre Bressols"
@@ -40,17 +40,18 @@ export default function QuienesSomos() {
                 </div>
 
                 {/* Second image */}
-                <div className="relative h-[100px] xs:h-[120px] sm:h-[250px] w-full sm:w-[250px] rounded-xl overflow-hidden z-10 transition-all duration-300 hover:scale-105 hover:-rotate-2 hover:shadow-xl transform sm:translate-x-[20%] sm:translate-y-12">
+                <div className="relative h-[100px] xs:h-[120px] sm:h-[250px] w-full sm:w-[250px] rounded-xl overflow-hidden z-10 transition-all duration-300 md:hover:scale-105 md:hover:-rotate-2 md:hover:shadow-xl transform sm:translate-x-[20%] sm:translate-y-12">
                   <Image
                     src="/actividad-8.jpg"
                     alt="Interior del centre Bressols"
                     fill
                     className="object-cover rounded-xl"
+                    style={{ objectPosition: "center 20%" }}
                   />
                 </div>
 
                 {/* Third image */}
-                <div className="relative h-[140px] xs:h-[160px] sm:h-[300px] w-full sm:w-[400px] rounded-xl overflow-hidden col-span-1 sm:col-span-2 z-20 transition-all duration-300 hover:scale-105 hover:-rotate-2 hover:shadow-xl transform sm:translate-x-[15%] sm:translate-y-[-20%]">
+                <div className="relative h-[140px] xs:h-[160px] sm:h-[300px] w-full sm:w-[400px] rounded-xl overflow-hidden col-span-1 sm:col-span-2 z-20 transition-all duration-300 md:hover:scale-105 md:hover:-rotate-2 md:hover:shadow-xl transform sm:translate-x-[15%] sm:translate-y-[-20%]">
                   <Image
                     src="/excursion-1.jpg"
                     alt="Equip de professionals de Bressols"
@@ -78,13 +79,12 @@ export default function QuienesSomos() {
               D&apos;EDUCACIÓ.
             </p>
             <h2 className="text-xl xs:text-2xl sm:text-4xl font-bold text-bressolsAzul mb-4 sm:mb-6 leading-tight">
-              SOM UN CENTRE D&apos;EDUCACIÓ INFANTIL AMB MÉS DE 20 ANYS D&apos;
+              SOM UN CENTRE D&apos;EDUCACIÓ INFANTIL AMB MÉS DE 25 ANYS D&apos;
               EXPERIÈNCIA
             </h2>
             <p className="text-gray-600 mb-6 sm:mb-8 text-sm xs:text-base sm:text-lg leading-relaxed">
-              Ens dediquem a l&apos;educació i dels infants de 0 a 3 anys,
-              Oferint un espai càlid, segur i estimulant per als més petits. La
-              nostra filosofia es basa en el respecte pel ritme de cada infant,
+              Ens dediquem a l&apos;educació i dels menuts de 0 a 3 anys,
+              Oferint un espai càlid, segur i estimulant per als més petits. Treballem respectant el ritme de cada xiquet/a,
               fomentant la seva autonomia, curiositat i creativitat des del
               primer dia.
             </p>
@@ -98,7 +98,7 @@ export default function QuienesSomos() {
         </div>
 
         {/* Bocadillos centrados al final */}
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-8 mt-12 sm:mt-16 px-4">
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-8 mt-20 sm:mt-24 px-4">
           <RecuadroDecorativo
             texto="Docents professionals que es fan responsables de la formació i de l'educació dels alumnes."
             color="azul"
@@ -108,7 +108,15 @@ export default function QuienesSomos() {
             className="relative left-0 right-0 max-w-sm"
           />
           <RecuadroDecorativo
-            texto="Més de 20 anys d'experiència educant infants de 0 a 3 anys."
+            texto="Seguiment continuat del procés educatiu, a fi d'estar permanentment informats de l'evolució del seu fill i poder intervindre de forma immediata en cas d'haver problemes."
+            color="morado"
+            posicion="izquierda"
+            delay={0.4}
+            inView={inView}
+            className="relative left-0 right-0 max-w-sm"
+          />
+          <RecuadroDecorativo
+            texto="Més de 25 anys d'experiència educant menuts de 0 a 3 anys."
             color="sky"
             posicion="derecha"
             delay={0.5}
