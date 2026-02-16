@@ -25,9 +25,9 @@ export default function HeroCarousel() {
         </h1>
 
         {/* Imágenes debajo del título */}
-        <div className="flex flex-col sm:flex-row items-center gap-6 sm:gap-12 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-300">
+        <div className="flex flex-row items-center gap-4 sm:gap-12 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-300">
           {/* Logo */}
-          <div className="relative w-32 h-32 sm:w-48 sm:h-48 shadow-2xl transform hover:scale-105 transition-transform duration-300 rounded-full">
+          <div className="relative w-24 h-24 sm:w-48 sm:h-48 shadow-2xl transform hover:scale-105 transition-transform duration-300 rounded-full">
             <div className="relative w-full h-full rounded-full overflow-hidden">
                <Image
                 src="/logo.jpg" 
@@ -39,7 +39,7 @@ export default function HeroCarousel() {
           </div>
 
           {/* Foto Equip */}
-          <div className="relative w-40 h-40 sm:w-56 sm:h-56 shadow-2xl transform hover:scale-105 transition-transform duration-300 rotate-3 rounded-2xl">
+          <div className="relative w-32 h-32 sm:w-56 sm:h-56 shadow-2xl transform hover:scale-105 transition-transform duration-300 rotate-3 rounded-2xl">
              <div className="relative w-full h-full rounded-xl overflow-hidden">
               <Image
                 src="/foto-equip.png"
