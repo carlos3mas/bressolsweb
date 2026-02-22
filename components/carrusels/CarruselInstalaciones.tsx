@@ -26,11 +26,11 @@ export default function CarruselInstalaciones() {
 
 
   return (
-    <div className="relative w-full max-w-4xl mx-auto rounded-xl overflow-hidden shadow-lg">
+    <div className="relative w-full max-w-4xl mx-auto rounded-xl overflow-hidden">
       <Image
         src={images[current]}
         alt={`Instalación ${current + 1}`}
-        className="w-full h-80 sm:h-96 object-cover transition-all duration-700"
+        className="w-full h-80 sm:h-96 object-contain transition-all duration-700"
         width={1000}
         height={1000}
       />

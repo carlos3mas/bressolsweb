@@ -15,8 +15,8 @@ export default function Footer() {
             </h3>
             <p className="text-sm xs:text-base text-gray-700 leading-relaxed">
               Espai educatiu homologat i subvencionat per la Conselleria
-              d&apos;Educació. Acompanyem famílies i menuts amb una metodologia
-              basada en l&apos;afecte, el joc i el respecte pels ritmes.
+              d&apos;Educació. Acompanyem famílies i menuts amb un treball 
+              basat en l&apos;afecte, el joc i el respecte pels ritmes.
             </p>
           </div>
 

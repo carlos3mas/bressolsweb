@@ -8,10 +8,11 @@ const imagenes = [
   '/actividad-3.jpg',
   '/actividad-4.jpg',
   '/actividad-5.jpg',
-  '/actividad-6.jpg',
-  '/actividad-7.jpg',
   '/actividad-8.jpg',
-  '/actividad-9.jpg',
+  '/actividad-12.jpg',
+  '/actividad-13.jpg',
+  '/hero3.jpg',
+  '/hero4.jpg',
 ]
 
 export default function CarruselClases() {
@@ -28,12 +29,12 @@ export default function CarruselClases() {
 
 
   return (
-    <div className="w-full md:w-1/2 relative h-64 sm:h-80 overflow-hidden rounded-lg shadow-lg">
+    <div className="w-full md:w-1/2 relative h-64 sm:h-80 overflow-hidden rounded-lg">
       <Image
         src={imagenes[indiceActual]}
         alt={`Foto clase ${indiceActual + 1}`}
         fill
-        className="object-cover rounded-lg transition-opacity duration-500"
+        className="object-contain rounded-lg transition-opacity duration-500"
         priority
       />
 

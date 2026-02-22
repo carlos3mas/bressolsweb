@@ -24,40 +24,39 @@ export default function QuienesSomos() {
             initial="hidden"
             animate={inView ? "visible" : "hidden"}
           >
-            <div className="relative w-full h-[380px] xs:h-[420px] sm:h-[600px] rounded-2xl overflow-visible p-2 sm:p-4">
-              {/* Updated circle with correct color and position */}
-              <div className="hidden sm:block absolute left-[60%] top-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] bg-bressolsAzul rounded-full z-0"></div>
-              <div className="relative grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4 h-full">
+            <div className="relative w-full h-[350px] xs:h-[450px] sm:h-[600px] rounded-2xl overflow-visible p-2 sm:p-4">
+              {/* Círculo decorativo de fondo (sin opacity-80 para que no se vea gris en móvil) */}
+              <div className="absolute left-[50%] sm:left-[60%] top-1/2 -translate-x-1/2 -translate-y-1/2 w-[280px] xs:w-[350px] sm:w-[500px] h-[280px] xs:h-[350px] sm:h-[500px] bg-bressolsAzul rounded-full z-0"></div>
+              
+              <div className="relative block sm:grid sm:grid-cols-2 sm:gap-4 h-full w-full">
                 {/* First image */}
-                <div className="relative h-[100px] xs:h-[120px] sm:h-[250px] w-full sm:w-[350px] rounded-xl overflow-hidden z-10 transition-all duration-300 md:hover:scale-105 md:hover:-rotate-2 md:hover:shadow-xl transform sm:-translate-y-4">
+                <div className="absolute sm:relative top-[5%] sm:top-auto left-[5%] sm:left-auto w-[55%] sm:w-[350px] h-[40%] sm:h-[250px] rounded-xl overflow-hidden z-10 transition-all duration-300 md:hover:scale-105 md:hover:-rotate-2 md:hover:shadow-xl transform sm:-translate-y-4 shadow-lg sm:shadow-none">
                   <Image
                     src="/foto-centro.jpg"
                     alt="Exterior del centre Bressols"
                     fill
-                    className="object-cover rounded-xl"
+                    className="object-cover"
                     priority
                   />
                 </div>
 
                 {/* Second image */}
-                <div className="relative h-[100px] xs:h-[120px] sm:h-[250px] w-full sm:w-[250px] rounded-xl overflow-hidden z-10 transition-all duration-300 md:hover:scale-105 md:hover:-rotate-2 md:hover:shadow-xl transform sm:translate-x-[20%] sm:translate-y-12">
+                <div className="absolute sm:relative top-[15%] sm:top-auto right-[2%] sm:right-auto w-[45%] sm:w-[250px] h-[35%] sm:h-[250px] rounded-xl overflow-hidden z-10 transition-all duration-300 md:hover:scale-105 md:hover:-rotate-2 md:hover:shadow-xl transform sm:translate-x-[20%] sm:translate-y-12 shadow-lg sm:shadow-none">
                   <Image
                     src="/actividad-8.jpg"
                     alt="Interior del centre Bressols"
                     fill
-                    className="object-cover rounded-xl"
-                    style={{ objectPosition: "center 20%" }}
+                    className="object-cover"
                   />
                 </div>
 
                 {/* Third image */}
-                <div className="relative h-[140px] xs:h-[160px] sm:h-[300px] w-full sm:w-[400px] rounded-xl overflow-hidden col-span-1 sm:col-span-2 z-20 transition-all duration-300 md:hover:scale-105 md:hover:-rotate-2 md:hover:shadow-xl transform sm:translate-x-[15%] sm:translate-y-[-20%]">
+                <div className="absolute sm:relative bottom-[5%] sm:bottom-auto left-[10%] sm:left-auto w-[80%] sm:w-[400px] h-[45%] sm:h-[300px] sm:col-span-2 rounded-xl overflow-hidden z-20 transition-all duration-300 md:hover:scale-105 md:hover:-rotate-2 md:hover:shadow-xl transform sm:translate-x-[15%] sm:translate-y-[-20%] shadow-xl sm:shadow-none">
                   <Image
-                    src="/excursion-1.jpg"
+                    src="/actividad-11.jpg"
                     alt="Equip de professionals de Bressols"
                     fill
-                    className="object-cover rounded-xl"
-                    style={{ objectPosition: "center center" }}
+                    className="object-cover"
                   />
                 </div>
               </div>
@@ -84,7 +83,7 @@ export default function QuienesSomos() {
             </h2>
             <p className="text-gray-600 mb-6 sm:mb-8 text-sm xs:text-base sm:text-lg leading-relaxed">
               Ens dediquem a l&apos;educació i dels menuts de 0 a 3 anys,
-              Oferint un espai càlid, segur i estimulant per als més petits. Treballem respectant el ritme de cada xiquet/a,
+              Oferint un espai càlid, segur i estimulant per als més menuts. Treballem respectant el ritme de cada xiquet/a,
               fomentant la seva autonomia, curiositat i creativitat des del
               primer dia.
             </p>

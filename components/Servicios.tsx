@@ -59,7 +59,7 @@ export default function Servicios() {
             </h1>
             <p className="text-sm xs:text-base sm:text-lg text-justify leading-relaxed">
               Organitzem excursions, festes i trobades en família per a
-              reforçar el vincle entre escola, alumnes i llar. Aquestes
+              reforçar el vincle entre escola, alumnes i famílies. Aquestes
               experiències fomenten la convivència, la participació i la
               creació de records compartits que enriqueixen la comunitat
               educativa.

@@ -6,7 +6,7 @@ export default function HeroCarousel() {
       {/* Fondo estático con blur */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/hero3.jpg"
+          src="/actividad-10.jpg"
           alt="Fondo Hero"
           fill
           className="object-cover blur-[5px] scale-105 filter brightness-75"
@@ -27,13 +27,13 @@ export default function HeroCarousel() {
         {/* Imágenes debajo del título */}
         <div className="flex flex-row items-center gap-4 sm:gap-12 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-300">
           {/* Logo */}
-          <div className="relative w-24 h-24 sm:w-48 sm:h-48 shadow-2xl transform hover:scale-105 transition-transform duration-300 rounded-full">
-            <div className="relative w-full h-full rounded-full overflow-hidden">
+          <div className="relative w-24 h-24 sm:w-48 sm:h-48 shadow-2xl transform hover:scale-105 transition-transform duration-300 rounded-2xl">
+            <div className="relative w-full h-full rounded-2xl overflow-hidden">
                <Image
                 src="/logo.jpg" 
                 alt="Logo Bressols"
                 fill
-                className="object-contain rounded-full"
+                className="object-contain rounded-2xl"
               />
             </div>
           </div>

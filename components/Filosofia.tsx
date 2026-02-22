@@ -129,7 +129,7 @@ export default function Filosofia() {
           className="drop-shadow-lg mb-4 sm:mb-6 w-[150px] h-[150px] xs:w-[180px] xs:h-[180px] sm:w-[220px] sm:h-[220px]"
         />
         <h2 className="text-3xl xs:text-4xl sm:text-5xl font-bold text-gray-900 mb-8 sm:mb-12 lg:mb-16 text-center">
-          VALORS
+          LA NOSTRA IDENTITAT  
         </h2>
         <p className="text-sm xs:text-base sm:text-lg text-gray-700 text-center max-w-2xl mb-6 sm:mb-8 leading-relaxed">
           A Bressols es treballa amb valors fonamentals que guien el nostre dia a dia.

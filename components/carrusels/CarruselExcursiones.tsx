@@ -24,12 +24,12 @@ export default function CarruselExcursiones() {
 
 
   return (
-    <div className="w-full md:w-1/2 relative h-64 sm:h-80 overflow-hidden rounded-lg shadow-lg">
+    <div className="w-full md:w-1/2 relative h-64 sm:h-80 overflow-hidden rounded-lg">
       <Image
         src={imagenes[indiceActual]}
         alt={`Foto excursió ${indiceActual + 1}`}
         fill
-        className="object-cover rounded-lg transition-opacity duration-500"
+        className="object-contain rounded-lg transition-opacity duration-500"
         priority
       />
 
