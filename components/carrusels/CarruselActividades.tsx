@@ -11,7 +11,8 @@ const imagenes = [
   '/actividad-8.jpg',
   '/actividad-12.jpg',
   '/actividad-13.jpg',
-  '/hero3.jpg',
+  '/actividad-14.jpg',
+  '/actividad-15.jpg',
   '/hero4.jpg',
 ]
 

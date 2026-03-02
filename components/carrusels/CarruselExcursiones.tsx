@@ -6,6 +6,7 @@ import { useState, useEffect } from 'react'
 const imagenes = [
   '/excursion-1.jpg',
   '/actividad-1.jpg',
+  '/extraescolar-1.jpg',
   '/hero1.jpg',
   '/hero2.jpg',
   '/hero3.jpg',
