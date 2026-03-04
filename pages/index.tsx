@@ -33,7 +33,8 @@ export default function Home() {
         <meta name="twitter:description" content="Centre autoritzat amb més de 25 anys d&apos;experiència educant menuts." />
         <meta name="twitter:image" content="/logo.jpg" />
         
-        <link rel="icon" href="/logo.jpg" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
       </Head>
 
       <Navbar />

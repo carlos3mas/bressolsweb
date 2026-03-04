@@ -61,7 +61,7 @@ export default function Navbar() {
             href="#filosofia"
             className="px-4 py-2 rounded-md text-bressolsAzul font-medium transition hover:bg-bressolsAzul hover:text-bressols"
           >
-            Metodologia
+            La nostra identitat
           </a>
           <a
             href="#contacte"
@@ -108,7 +108,7 @@ export default function Navbar() {
             onClick={toggleMenu}
             className="text-bressolsAzul font-medium"
           >
-            Filosofia
+            La nostra identitat
           </a>
           <a
             href="#contacte"
