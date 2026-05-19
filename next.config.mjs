@@ -3,6 +3,8 @@ const nextConfig = {
   reactStrictMode: true,
   
   // Optimización de imágenes
+  // AVIF requires sharp; WebP works without it as a fallback.
+  // sharp is listed in dependencies so both formats are supported in production.
   images: {
     formats: ['image/avif', 'image/webp'],
   },

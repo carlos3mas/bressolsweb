@@ -102,8 +102,8 @@ export default function Servicios() {
             <Image
               src="/furgoneta.jpg"
               alt="Transport escolar"
-              layout="fill"
-              objectFit="cover"
+              fill
+              style={{ objectFit: 'cover' }}
               className="rounded-lg shadow-md"
             />
           </div>
